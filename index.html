@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦇 Demencia 🦇</title>
+    <style>
+        /* Estilo general */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #f5f5f5;
+            font-family: 'Verdana', sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Fondo animado con estrellas */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFyMXVjNWs3dWZvbWRseTkzZHo1NGQ4bnAzaWY4b3Znem1nczk2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9bTjZrytydVRK/giphy.gif') repeat;
+            z-index: -1;
+            animation: moveStars 60s linear infinite;
+        }
+
+        @keyframes moveStars {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+
+        /* Encabezado */
+        header {
+            background-image: url('https://i.pinimg.com/736x/1b/14/54/1b145444fc138c74e3a13aaa38fcf735.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 0px 0px 15px #000;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        header h1 span {
+            color: #b5179e;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sección principal */
+        section {
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #1c1c1c;
+            border: 2px solid #b5179e;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 0 25px #b5179e;
+            animation: slideIn 2s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 500px;
+            border-radius: 15px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        iframe:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        /* Botón interactivo */
+        .join-button {
+            background-color: #b5179e;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .join-button:hover {
+            background-color: #d9534f;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #161616;
+            color: #999;
+            font-size: 1em;
+            animation: fadeInUp 2.5s ease-out;
+        }
+
+        footer a {
+            color: #b5179e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ajustes de diseño responsivo */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            section {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            iframe {
+                height: 400px;
+            }
+
+            .join-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+
+        /* Estilo para el mensaje del clic derecho */
+        .message {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Fondo de estrellas animado -->
+    <div class="stars"></div>
+
+    <!-- Audio de fondo -->
+    <audio id="audio" loop>
+        <source src="Yecko X Hades66 - 19X (Official Video).mp3" type="audio/mpeg">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>🦇 Demencia <span>Social</span> 🦇</h1>
+    </header>
+
+    <!-- Sección principal -->
+    <section>
+        <h2>Bienvenido a Demencia</h2>
+        <p>Un lugar donde lo inusual se encuentra con la locura. ¡Atrévete a explorar nuestro mundo!</p>
+        <a href="https://discord.gg/PfweJsmxsb" class="join-button" target="_blank">Únete a Demencia</a>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>🖤 Creado con amor por <strong>Astra</strong> | <a href="https://discord.gg/PfweJsmxsb" target="_blank">Únete ahora</a> 🖤</p>
+    </footer>
+
+    <!-- Mensaje del clic derecho -->
+    <div class="message">Código fuente encriptado</div>
+
+    <script>
+        // Bloquear clic derecho
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+            showMessage(e.clientX, e.clientY);
+        });
+
+        // Función para mostrar el mensaje que sigue al mouse
+        function showMessage(x, y) {
+            const message = document.querySelector(".message");
+            message.style.left = x + 'px';
+            message.style.top = y + 'px';
+            message.style.display = 'block';
+            setTimeout(() => message.style.display = 'none', 1500); // El mensaje se oculta después de 1.5 segundos
+        }
+
+        // Reproducir la música al hacer click en la pantalla
+        document.body.addEventListener("click", function() {
+            var audio = document.getElementById("audio");
+            audio.play(); // Reproduce la música cuando el usuario hace clic en la pantalla
+        });
+    </script>
+</body>
+</html>
+
+
